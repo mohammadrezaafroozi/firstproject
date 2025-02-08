@@ -1,0 +1,417 @@
+:root {
+    --mycolor: #b88a6f
+}
+
+.btn {
+
+    width: 150px;
+    /* height: 100%; */
+    /* border: 2px solid pink; */
+    background-color: var(--mycolor);
+    text-transform: uppercase;
+    font-size: 25px;
+    color: rgb(248, 240, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+main {
+    width: 100%;
+    height: auto;
+
+    >.head-top {
+        width: 100%;
+        height: 85px;
+        /* background-color: black; */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+
+        >.row {
+            height: 100%;
+            padding-inline: 5%;
+            background-color: rgb(248, 240, 240);
+
+
+            >* {
+                height: 100%;
+                /* border: 2px solid red; */
+
+            }
+
+            >figure {
+                width: 30%;
+                display: flex;
+                align-items: center;
+            }
+
+            >nav {
+                width: 70%;
+                height: 100%;
+
+
+                >.row {
+                    height: 100%;
+                    flex-direction: row-reverse;
+
+
+                    >* {
+                        height: 100%;
+
+                        display: flex;
+                        /* border: 2px solid white; */
+
+                    }
+
+
+
+                    >ul {
+                        min-width: 200px;
+                        display: flex;
+                        /* background-color: blueviolet; */
+
+                        >li {
+                            >a {
+                                background-color: rgb(248, 240, 240);
+                                padding: 0 20px;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                font-size: 20px;
+                                text-transform: capitalize;
+
+                                &:hover {
+                                    color: var(--mycolor);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    /* end header-top */
+    .head-bottom {
+        width: 100%;
+        min-height: 300px;
+        background-image: linear-gradient(45deg, rgba(255, 197, 121, 0.667), rgb(0, 0, 53));
+        margin-top: 80px;
+        padding: 10% 0 0 5%;
+
+        >.row {
+            >* {
+                width: 50%;
+                min-height: 400px;
+                /* border: 1px solid rgb(49, 38, 38); */
+
+            }
+
+            >div {
+                align-content: flex-start;
+
+                >* {}
+
+                >img {
+                    width: 100px;
+                    height: 100px;
+                    animation: animelogo 10s linear infinite;
+
+                }
+
+                >h1,
+                p {
+                    width: 100%;
+                    color: white;
+                }
+
+                >h1 {
+                    font-size: 80px;
+                    margin: 20px 0;
+
+                }
+
+                >p {
+                    font-size: 20px;
+
+
+                }
+
+                >a {
+                    height: 80px;
+                    margin-top: 50px;
+
+                }
+
+            }
+
+            >figure {
+                >img {
+                    width: 100%;
+                }
+
+            }
+        }
+
+    }
+
+    /* end head-bottom */
+    .articles {
+        width: 100%;
+        min-height: 100px;
+        padding: 5%;
+
+        >.row {
+            justify-content: space-evenly;
+
+            >article {
+                width: 350px;
+                height: 550px;
+                border: 2px solid rgba(21, 18, 18, 0.504);
+                border-radius: 8px;
+                padding: 10px;
+
+                &:hover {
+                    >figure {
+                        >img {
+                            scale: 1.2;
+                        }
+                    }
+
+                    >h2 {
+                        color: var(--mycolor);
+
+                        &::after {
+                            background-color: #ddd8d8;
+                            color: rgba(0, 0, 0, 0.723);
+                        }
+                    }
+                }
+
+                >* {
+                    width: 100%;
+                }
+
+                >figure {
+                    overflow: hidden;
+
+                    >img {
+                        width: 100%;
+                        transition: 0.7s;
+                    }
+
+                }
+
+                >h2 {
+                    font-size: 30px;
+                    margin: 5px 0;
+                    text-transform: capitalize;
+                    transition: .4s;
+                    position: relative;
+
+                    &::after {
+                        content: attr(data-counter);
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--mycolor);
+                        color: white;
+                        font-size: 20px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: -10px;
+                        left: -70px;
+                        transition: 1s;
+                        border: 1px black solid;
+                    }
+                }
+
+                >p {
+                    font-size: 15px;
+                    color: rgba(0, 0, 0, 0.812);
+                }
+            }
+        }
+
+    }
+
+    /* end article section */
+
+    .about {
+        width: 100%;
+        padding: 5%;
+
+        >.row {
+            >* {
+                min-height: 200px;
+                /* border: 2px solid black; */
+
+            }
+
+            >figure {
+                width: 30%;
+                padding: 100px 0;
+                position: relative;
+                z-index: 1;
+
+                >img {}
+
+            }
+
+            >div {
+                width: 70%;
+                background-color: burlywood;
+                /* border: 2px solid red; */
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 100px;
+
+                >div {
+                    width: 50%;
+                    height: 60%;
+
+
+                    /* border: 2px solid white; */
+
+                    >* {}
+
+                    >h2 {
+                        font-size: 60px;
+                        margin: 10px 0;
+
+                    }
+
+                    >p {
+                        font-size: 15px;
+                        color: rgba(0, 0, 0, 0.773);
+                        margin: 20px 0;
+                        line-height: 30px;
+                    }
+
+                    >a {
+                        height: 80px;
+                        width: 250px;
+
+                    }
+
+                }
+
+            }
+        }
+
+
+    }
+
+    /* end about */
+
+    .foot {
+        width: 100%;
+        min-height: 90vh;
+        background-image: url(../img/footer-bg.png);
+        padding-top: 100px;
+
+        >.row {
+            >div {
+                /* border: 2px solid white; */
+                min-height: 300px;
+
+                &:first-of-type {
+                    width: 60%;
+                }
+
+                &:last-of-type {
+                    width: 40%;
+
+                    >div {
+                        width: 50%;
+
+                        &:first-of-type {
+
+                            /* column one  */
+                            >div {
+                                width: 100%;
+                                height: 50%;
+                                /* border: solid 2px rgb(37, 109, 255); */
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: start;
+                                align-items: center;
+                                padding-left: 15px;
+
+                                &:first-of-type {
+                                    >img {
+                                        margin-top: 30px;
+                                    }
+
+                                    >h4 {
+
+                                        width: 100%;
+                                        color: rgba(255, 255, 255, 0.808);
+                                        line-height: 35px;
+                                    }
+                                }
+
+                                &:last-of-type {
+                                    >a {
+                                        color: var(--mycolor);
+                                        font-size: 30px;
+                                    }
+
+                                    >ul {
+                                        >li {
+                                            color: var(--mycolor);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:last-of-type {
+
+                            /* column two   */
+                            >div {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-top: 50px;
+
+                                >h4 {
+                                    font-size: 20px;
+                                    color: var(--mycolor);
+
+                                }
+
+                                >ul {
+
+
+                                    >li {
+                                        color: rgba(255, 255, 255, 0.659);
+                                        margin: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* end foot */
+
+    }
+}
+    @keyframes animelogo {
+        to {
+            transform: rotate(360deg);
+
+        }
+    }
